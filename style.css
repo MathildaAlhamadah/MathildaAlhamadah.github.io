@@ -31,9 +31,9 @@ p{
 .page_modelisation{
     background-color: beige; /*arrière-plan du texte beige*/
     border:2px solid beige; /*bordure 2 pixels ligne continue même couleur que mon background pour que ça fasse comme un bouton*/
-    border-radius: 5px; /*arrondi des angles*/
+    border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px ; /*arrondi des angles personnalisé pour forme de bouton originale */
     box-shadow: 2px 2px 10px rgb(29, 49, 63); /*ombre de l'encadré : décalage à droite, décalage en bas, largeur générale de l'ombre*/
-    border-width: 2px 25px; /*hauteur de rectangle 2 pixels autour du texte, largeur 25. Possible aussi de faire avec 1.5em par exemple = 1.5 fois taille du texte*/
+    border-width: 5px 55px; /*hauteur de rectangle en em = nombre de fois taille du texte. possible aussi en pixels*/
 }
 
 .page_modelisation a{ /* "a" pour modifier directement les propriétés du lien hypertexte*/
@@ -44,9 +44,9 @@ p{
 .page_projets_data{
     background-color: beige; 
     border:2px solid beige;
-    border-radius: 7% 93% 6% 94% / 80% 18% 82% 20% ; 
+    border-radius: 50px 50px 50px 50px / 50px 50px 50px 50px ;
     box-shadow: 2px 2px 10px rgb(29, 49, 63); 
-    border-width: 0.3em 2em;
+    border-width: 5px 55px;
 }
 
 .page_projets_data a{
