@@ -33,5 +33,16 @@
         Pour push : <br>
         <code>> git push </code>
     </p>    
+    <h1>Les possibilités que je n'ai pas utilisées dans mon site test :</h1>
+    <p>
+        Il est possible d'effectuer une action sur un élément B lors de l'interaction avec un autre élément A. <br>
+        <code>
+            h1:hover ~ .page_modelisation a { /*quand on survole un titre 1 (A)*/ <br>
+            background-color: grey; /*Le background de l'élément de classe page_modelisation (B) qui suit (~) devient gris*/ <br>
+            color: black; /*La couleur de l'élément page_modelisation qui suit devient noire*/ <br>
+            } <br>
+        </code>
+        Le sélecteur ~ est pour le 1er élément de la classe B situé après A. Le sélécteur + est pour l'élément de la classe B situé directement après A. Si après A il n'y a pas d'élement de la classe B, rien ne se passe.
+    </p>
 </body>
 </html>

@@ -34,11 +34,25 @@ p{
 
 img:hover { /*s'applique au survol d'une image avec la souris*/
     opacity:0.7
+}
 
+h1:hover ~ .page_modelisation a { /*quand je survole une image une action arrive à data analyse*/
+    background-color: grey;
+    color:#ff1e56;
 }
 
 a:hover { /*s'applique au survol d'un lien hypertexte*/
     color: blue;
+}
+
+a:active { /*s'applique au clic d'un lien hypertexte*/
+    color: grey;
+}
+
+a:focus { /*s'applique à la sélection d'un lien quand on clique sur tab pour naviguer entre tous les liens*/
+    background-color: darkorange;
+    color: white;
+    outline-color: orangered;
 }
 
 /*Boutons vers les projets*********************/
@@ -57,6 +71,10 @@ a:hover { /*s'applique au survol d'un lien hypertexte*/
     text-decoration: none; /*enlever soulignement*/
 }
 
+.page_modelisation:hover a{ /*au survol texte en bleu*/
+    color: blue;
+}
+
     /*Projets data***************/
 
 .page_projets_data{
@@ -70,6 +88,10 @@ a:hover { /*s'applique au survol d'un lien hypertexte*/
 .page_projets_data a{
     color: black;
     text-decoration: none;
+}
+
+.page_projets_data:hover a{
+    color: blue;
 }
 
 /*Autres span à la mise en page spécifiques*********************/
