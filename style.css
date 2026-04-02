@@ -1,3 +1,5 @@
+/*Titres************************/
+
 h1{
     text-align: center;
     background-color: white; /*Couleur de fond pour le titre uniquement*/
@@ -17,6 +19,8 @@ h2{
     border: 2px solid black; /*bordure*/
 }
 
+/*Corps de texte*******************************/
+
 body {
   font-family: "Trispace", sans-serif; /*Appliquer la police chargée dans le html à tout le site*/
   font-size: larger;
@@ -33,6 +37,13 @@ img:hover { /*s'applique au survol d'une image avec la souris*/
 
 }
 
+a:hover { /*s'applique au survol d'un lien hypertexte*/
+    color: blue;
+}
+
+/*Boutons vers les projets*********************/
+
+    /*Modélisation***************/
 .page_modelisation{
     background-color: beige; /*arrière-plan du texte beige*/
     border:2px solid beige; /*bordure 2 pixels ligne continue même couleur que mon background pour que ça fasse comme un bouton*/
@@ -46,6 +57,8 @@ img:hover { /*s'applique au survol d'une image avec la souris*/
     text-decoration: none; /*enlever soulignement*/
 }
 
+    /*Projets data***************/
+
 .page_projets_data{
     background-color: beige; 
     border:2px solid beige;
@@ -58,6 +71,8 @@ img:hover { /*s'applique au survol d'une image avec la souris*/
     color: black;
     text-decoration: none;
 }
+
+/*Autres span à la mise en page spécifiques*********************/
 
 .liste_langages_prog{
     color: sandybrown;  /*colorer spécifiquement ma liste de langages de prog*/
@@ -75,9 +90,15 @@ img:hover { /*s'applique au survol d'une image avec la souris*/
     font-size: 20px; /*choisir la taille de façon objective en pixels*/
 }
 
+/*e-mail****************************/
+
 .e_mail a { /*on met "a" pour cibler directement le lien, pcq sinon le fait que ça soit un lien (bleu et souligné) écrase les autres propriétés de mise en forme*/
     text-decoration: underline; /*j'ai souligné l'e-mail mais c'est déjà souligné avec le lien hypertexte*/
     color: black;
+}
+
+.e_mail:hover a { /*au survol du lien e-mail il devient bleu*/
+    color: blue;
 }
 
 .contact{
