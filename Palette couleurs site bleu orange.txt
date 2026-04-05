@@ -1,0 +1,24 @@
+Palette couleurs site : bleu orange marron beige
+
+#5ac1cf bleu 1
+#81cdda bleu 2
+#aadbe0 bleu 3
+
+#ffe299 beige 1
+#ffe8b5 beige 2
+#fbeccd beige 3
+
+#ffb739 orange 1
+#ffc463 orange 2
+#ffd28f orange 3
+
+#ea7715 marron 1
+#e98a40 marron 2
+#e09e6f marron 3
+
+#542c19 marron très foncé
+#20262f bleu très foncé
+#72726f gris
+
+#625650 marron des boutons
+#11294d bleu foncé même DA

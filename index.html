@@ -10,55 +10,83 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Trispace:wght@100..800&display=swap" rel="stylesheet"> <!--Il faut ces 3 lignes de code pour charger la police qu'on veut depuis google. Pour l'utiliser c'est dans le CSS qu'on l'appelle-->
 </head>
 <body>      <!--Tout ce qui est affiché sur la page web-->
-    <h1>Mes projets</h1>
-    <p>
-        <em>Réalisés en autonomie ou dans le cadre de ma <a href="Docs/CV Mathilda Alhamadah Data Scientist.pdf" target="_blank">formation</a></em>
-    </p>
+
+    <!--En-tête du site : présent sur toutes les pages--------------->
+    <header>
+        <div class="en_tete">
+        Mathilda Alhamadah
+        </div> 
+    </header>
+
+    <!--Onglets du site---------------------------------------------->
+    <nav>
+        <a href="Projets_data/Projets_data.html">Projets Data Science</a>
+        <a href="Projets_prog/projets_prog.html">Projets programmation</a>
+    </nav>
+
+    <!--Corps du site-->
+    <main>
+
+    <section>
+        <h1>Mes projets</h1>
+            <p>
+                <em>Réalisés en autonomie ou dans le cadre de ma <a href="Docs/CV Mathilda Alhamadah Data Scientist.pdf" target="_blank">formation</a></em>
+            </p>
+    </section>
+
+    <section>
         <h2>Projets Data</h2>
         <p>
             <a> <!--Pas besoin du href + lien parce que je l'ai mis dans onclick = window.open dans les propriétés de l'image. Comme target = "_blank" mais pour les images.-->
                 <img src="Images/ordinateur_et_graphiques.jpg" alt="Ordinateur affichant différents graphiques"style="max-width: 40%; height: auto;" onclick="window.open('https://unsplash.com/fr/photos/laptop-computer-on-glass-top-table-hpjSkU2UYSU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', '_blank')"/>  <!--Ajout image avec description pour malvoyants et si l'image se charge mal + pour le référencement. Et title = l'infobulle qd on passe la souris.-->
             </a>
         </p>
-        <p class="taille_moyenne">
+
+        <p>
         Faites un tour sur mes projets en <span class="data_analyse"><strong>Data analyse</strong></span>, parmi : <!--span c'est juste pour englober un groupe de mots/ un bout de code ensemble. Rappel : strong c'est pour mettre en gras-->
-            <p>
-                <span class="page_modelisation">
-                    <a href="Projets_data/Modelisation.html" target="_blank">Projets de modélisation</a> <!-- target="_blank" pour ouvrir le lien dans un nouvel onglet-->
-                </span>
-            </p>
-            <p>
-                <span class="page_projets_data">
-                    <a href="Projets_data/SVM.html" target="_blank">Projet SVM</a>
-                </span>
-            </p>
         </p>
+
+        <div class="container">
+                <a class="bouton" href="Projets_data/Modelisation.html" target="_blank">Projets de modélisation</a> <!-- target="_blank" pour ouvrir le lien dans un nouvel onglet-->
+
+                <a class="bouton" href="Projets_data/SVM.html" target="_blank">Projet SVM</a>
+        </div>
+        
+        <p>
         Pour les projets data analyse, je programme usuellement :
             <ul class="liste_langages_prog"> <!--class c'est pour donner un nom à l'élément (ici liste) comme ça je peux l'appeler lui spécifiquement en css (pour le colorer par exemple)-->
                 <li>En R</li>
                 <li>En Python</li>
                 <li>En SAS</li>
             </ul>
-        <h2>Projets Programmation</h2>
-        <p>
-            <a>
-                <img src="Images/ecran_code_sombre.jpg" alt="Écran contenant du code informatique sur fond sombre" style="max-width: 25%; height: auto;" onclick="window.open('https://unsplash.com/fr/photos/capture-decran-de-codage-informatique-hvSr_CVecVI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', '_blank')"/> <!--style c'est pour redimensionner l'image, ici en % c'est pour que ça soit par rapport à la taille d'un élément (celui ds lequel il est contenu style un en-tête) mais sinon on peut faire en pixels-->
-            </a>
         </p>
-        <p class="taille_moyenne">
-            Jetez un oeil à mes projets en <span class="python"><strong>Python</strong></span>, parmi :
-            <ul>
-                <li><a href="Projets_prog/IA.html" target="_blank">Projet IA</a></li>
-                <li><a href="Projets_prog/Opti.html" target="_blank">Projet optimisation sous contraintes</a></li>
-                <li>Projet écoulement de l'eau</li>
-                <li>Projet <mark>POO</mark></li>
-            </ul>
-        </p>
+    </section>
 
-    <span class="contact">
-        Contact : <span class="e_mail">
-            <a href="mailto:mathilda.alhamadah@gmail.com">mathilda.alhamadah@gmail.com</a> <!--pas besoin de targer = _blank pour ouvrir le mail dans un nouvel onglet ! -->
+    <section>
+        <h2>Projets Programmation</h2>
+            <p>
+                <a>
+                    <img src="Images/ecran_code_sombre.jpg" alt="Écran contenant du code informatique sur fond sombre" style="max-width: 25%; height: auto;" onclick="window.open('https://unsplash.com/fr/photos/capture-decran-de-codage-informatique-hvSr_CVecVI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText', '_blank')"/> <!--style c'est pour redimensionner l'image, ici en % c'est pour que ça soit par rapport à la taille d'un élément (celui ds lequel il est contenu style un en-tête) mais sinon on peut faire en pixels-->
+                </a>
+            </p>
+            <p class="taille_moyenne">
+                Jetez un oeil à mes projets en <span class="python"><strong>Python</strong></span>, parmi :
+                <ul>
+                    <li><a href="Projets_prog/IA.html" target="_blank">Projet IA</a></li>
+                    <li><a href="Projets_prog/Opti.html" target="_blank">Projet optimisation sous contraintes</a></li>
+                    <li>Projet écoulement de l'eau</li>
+                    <li>Projet <mark>POO</mark></li>
+                </ul>
+            </p>
+    </section>
+    </main>
+
+    <footer>
+        <span class="contact">
+            Contact : <span class="e_mail">
+                <a href="mailto:mathilda.alhamadah@gmail.com">mathilda.alhamadah@gmail.com</a> <!--pas besoin de targer = _blank pour ouvrir le mail dans un nouvel onglet ! -->
+            </span>
         </span>
-    </span>
+    </footer>
 </body>
 </html>
