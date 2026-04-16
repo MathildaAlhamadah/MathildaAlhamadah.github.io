@@ -1,146 +1,91 @@
-/*Titres************************/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.en_tete{
-    text-align: left;
-    font-size: large;
-    font-weight: bold;
-    background-color: #e98a40;
-    color: white;
-    width: 100%; /*pour que l'en-tête prenne pas toute la largeur de la page*/
-    margin: auto; /*centrer l'en-tête*/
-    padding-bottom: 0.75em;
-    padding-top: 0.25em;
-    padding-left: 1em;
-}
+    nav{
+      text-decoration: none;
+    }
 
-h1{
-    text-align: center;
-    background-color: white; /*Couleur de fond pour le titre uniquement*/
-    background-image: url("Images/ordinateur_et_graphiques.jpg"); /*Indiquer la position par rapport au fichier CSS et pas html ! Pour moi ça change rien pcq les 2 sont au même endroit*/
-    padding: 0.75em; /*marge, pour que l'encart du titre soit plus gros*/
-    background-size: cover; /*pour que l'image couvre toute la largeur de la page*/
-    background-position: center; /*pour que la partie qui s'affiche de l'image soit au centre*/
-    opacity: 0.8; /*titre et image un peu transparents*/
-    width: 70%;
-    ;
-}
+    body {
+      font-family: 'Inter', sans-serif; /*police*/
+      background: linear-gradient(20deg, #081a3b, #1f417d, #081a3b); /*fond en dégradé diagonal (135 degrés inclinaison*/
+      color: #ffffff; /*couleur texte*/
+      display: flex; /*afficher les uns sous les autres je crois*/
+      min-height: 100vh;
+    }
+ 
+    /*Pour page d'accueil : tout sauf les onglets*/
+    .partie_centree{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-h2{
-    color: white; /*texte en blanc*/
-    padding: 0.5em; /*que ça soit un peu gros*/
-    background: linear-gradient(to right, #ea7715, #ffe299, #5ac1cf); /*dégradé de 3 couleurs qui va vers la droite*/
-    border: 2px solid #aadbe0; /*bordure*/
-    width: 100%; /*toute la largeur de l'écran*/
-    margin: auto; /*centré*/
-}
+    .container {
+      max-width: 1000px; /*largeur de la textbox pour le texte du centre*/
+      padding: 40px; /*décalage de la textbox à droite je crois*/
+      text-align: center; /*centrer*/
+      flex: 1; /*Pour que le conteneur prenne tout l'espace du body, sinon y'a le bandeau bizarre en bas*/
+    }
 
-/*Corps de texte*******************************/
+    h1 {
+      font-size: 3rem; /*taille titre*/
+      margin-top: 50px;
+      margin-bottom: 25px; /*espace entre titre et mon nom*/
+      font-weight: 500;/*type de gras du texte*/
+    }
 
-body {
-  font-family: "Trispace", sans-serif; /*Appliquer la police chargée dans le html à tout le site*/
-  font-size: medium;
-  background-color: #aadbe0; /*Couleur de fond pour toute la page*/
-}
+    /*liens*/
+    a{
+      align-items: center; /*centrer les liens*/
+    }
 
-p{
-    color: black; /* tout le texte du html qui est dans un paragraphe <p> sera en bleu. Le texte pas dans un <p> sera pas en bleu !*/
-    background-color: #aadbe0; /*couleur autour du texte*/
-    font-size: medium;  /*choisir la taille de façon relative*/
-    margin: 50px; /*avoir une marge de chaque côté de la page*/
-    padding: 50px; /*avoir une marge dans chaque bloc paragraphe*/
-    width: 95%;
-    margin: auto;
-}
+    /*Mathilda Alhamadah + data scientist*/
+    .tagline {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem; /*taille*/
+      color: #ff8c42; /*couleur*/
+      margin-bottom: 30px; /*espacement sous le texte*/
+      letter-spacing: 2px; /*espacement entre les lettres*/
+    }
 
-ul{
-    width: 95%;
-    margin: auto;
-    padding: 25px;
-}
+    /*paragraphe description*/
+    .description {
+      font-size: 1.1rem; /*taille de la police*/
+      color: #d1d9e6; /*couleur texte*/
+      line-height: 1.6; /*espacement entre les lignes*/
+      max-width: 700px; /*largeur de la textbox*/
+      margin: 0 auto 40px; /*espace à laisser sous le texte*/
+    }
 
-.container{  /*s'applique aux containers = par exemple mes balises <div class="container">*/
-    display: flex; /*dire aux blocs qu'on va choisir où ils se mettent (par défaut : les uns à côté des autres)*/
-    gap: 50px; /*l'espace entre les 2 boutons*/
-    padding: 50px;
-    justify-content: space-around;
-}
+    /*bouton projets*/
+    .cta {
+      display: inline-block;
+      padding: 12px 28px; /*hauteur et largeur du bouton*/
+      border-radius: 30px; /*arrondi des angles*/
+      background: linear-gradient(90deg, #ff8c42, #ff5e00); /*dégradé couleur*/
+      color: white; /*couleur texte*/
+      text-decoration: none; /*pas de soulignement texte*/
+      font-weight: 500; /*type de gras du texte*/
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-img:hover { /*s'applique au survol d'une image avec la souris*/
-    opacity:0.7
-}
+    .cta:hover { /*au survol du bouton*/
+      transform: translateY(-2px); /*faire qu'il remonte un peu*/
+      box-shadow: 0 8px 20px rgba(255, 140, 66, 0.3); /*ombre*/
+    }
 
-/*liens hypertextes****************************/
-
-a{
-    text-decoration: none; /*pas souligné*/
-    color: #625650 ;
-    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px; /*arrondi*/
-    padding: 0.25em;
-}
-
-a:hover { /*s'applique au survol d'un lien hypertexte*/
-    color: #fbeccd;
-    background-color: #625650;
-
-}
-
-a:active { /*s'applique au clic d'un lien hypertexte*/
-    color: #fbeccd;
-}
-
-a:focus { /*s'applique à la sélection d'un lien quand on clique sur tab pour naviguer entre tous les liens*/
-    outline-color: #542c19;
-}
-
-/*Boutons vers les projets*********************/
-
-.bouton{
-    background-color: beige; /*arrière-plan du texte beige*/
-    border:2px solid beige; /*bordure 2 pixels ligne continue même couleur que mon background pour que ça fasse comme un bouton*/
-    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px ; /*arrondi des angles personnalisé pour forme de bouton originale */
-    box-shadow: 2px 2px 10px rgb(29, 49, 63); /*ombre de l'encadré : décalage à droite, décalage en bas, largeur générale de l'ombre*/
-    padding: 10px 20px; /*hauteur de rectangle en em = nombre de fois taille du texte. possible aussi en pixels*/
-    display: inline-block;
-}
-
-.bouton a{ /* "a" pour modifier directement les propriétés du lien hypertexte*/
-    color: black; /*noir au lieu de bleu*/
-    text-decoration: none; /*enlever soulignement*/
-}
-
-.bouton:hover a{ /*au survol texte en bleu*/
-    color: #fbeccd;
-    background-color: #11294d;
-}
-
-
-/*Autres span à la mise en page spécifiques*********************/
-
-.liste_langages_prog{
-    color: #625650;  /*colorer spécifiquement ma liste de langages de prog*/
-}
-
-.data_analyse{
-    color: #625650 ; /*colorer ce mot spécifique*/
-}
-
-.python{
-    color: #625650 ;
-}
-
-/*e-mail****************************/
-
-.e_mail a { /*on met "a" pour cibler directement le lien, pcq sinon le fait que ça soit un lien (bleu et souligné) écrase les autres propriétés de mise en forme*/
-    text-decoration: underline; /*j'ai souligné l'e-mail mais c'est déjà souligné avec le lien hypertexte*/
-    color: black;
-}
-
-.e_mail:hover a { /*au survol du lien e-mail il devient bleu*/
-    color: #542c19;
-}
-
-.contact{
-    display: block; /*parce qu'on a sélectionné avec span, mais normalement on peut pas sélectionner toute une ligne comme ça alors il faut transformer la sélection en bloc pour pouvoir le mettre à droite*/
-    text-align: right; /*mettre le texte à droite*/
-}
-
+    /*Pied de page*/
+    .footer {
+      position: relative;
+      width: 100%; /*largeur de la textbox, ici toute la page*/
+      text-align: center;
+      font-size: 0.9rem; /*taille de la police*/
+      color: #8893a8;
+      align-items: center;
+      justify-content: center;
+      background-color: #081a3b;
+    }

@@ -1,0 +1,146 @@
+/*Titres************************/
+
+.en_tete{
+    text-align: left;
+    font-size: large;
+    font-weight: bold;
+    background-color: #e98a40;
+    color: white;
+    width: 100%; /*pour que l'en-tête prenne pas toute la largeur de la page*/
+    margin: auto; /*centrer l'en-tête*/
+    padding-bottom: 0.75em;
+    padding-top: 0.25em;
+    padding-left: 1em;
+}
+
+h1{
+    text-align: center;
+    background-color: white; /*Couleur de fond pour le titre uniquement*/
+    background-image: url("Images/ordinateur_et_graphiques.jpg"); /*Indiquer la position par rapport au fichier CSS et pas html ! Pour moi ça change rien pcq les 2 sont au même endroit*/
+    padding: 0.75em; /*marge, pour que l'encart du titre soit plus gros*/
+    background-size: cover; /*pour que l'image couvre toute la largeur de la page*/
+    background-position: center; /*pour que la partie qui s'affiche de l'image soit au centre*/
+    opacity: 0.8; /*titre et image un peu transparents*/
+    width: 70%;
+    ;
+}
+
+h2{
+    color: white; /*texte en blanc*/
+    padding: 0.5em; /*que ça soit un peu gros*/
+    background: linear-gradient(to right, #ea7715, #ffe299, #5ac1cf); /*dégradé de 3 couleurs qui va vers la droite*/
+    border: 2px solid #aadbe0; /*bordure*/
+    width: 100%; /*toute la largeur de l'écran*/
+    margin: auto; /*centré*/
+}
+
+/*Corps de texte*******************************/
+
+body {
+  font-family: "Trispace", sans-serif; /*Appliquer la police chargée dans le html à tout le site*/
+  font-size: medium;
+  background-color: #aadbe0; /*Couleur de fond pour toute la page*/
+}
+
+p{
+    color: black; /* tout le texte du html qui est dans un paragraphe <p> sera en bleu. Le texte pas dans un <p> sera pas en bleu !*/
+    background-color: #aadbe0; /*couleur autour du texte*/
+    font-size: medium;  /*choisir la taille de façon relative*/
+    margin: 50px; /*avoir une marge de chaque côté de la page*/
+    padding: 50px; /*avoir une marge dans chaque bloc paragraphe*/
+    width: 95%;
+    margin: auto;
+}
+
+ul{
+    width: 95%;
+    margin: auto;
+    padding: 25px;
+}
+
+.container{  /*s'applique aux containers = par exemple mes balises <div class="container">*/
+    display: flex; /*dire aux blocs qu'on va choisir où ils se mettent (par défaut : les uns à côté des autres)*/
+    gap: 50px; /*l'espace entre les 2 boutons*/
+    padding: 50px;
+    justify-content: space-around;
+}
+
+img:hover { /*s'applique au survol d'une image avec la souris*/
+    opacity:0.7
+}
+
+/*liens hypertextes****************************/
+
+a{
+    text-decoration: none; /*pas souligné*/
+    color: #625650 ;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px; /*arrondi*/
+    padding: 0.25em;
+}
+
+a:hover { /*s'applique au survol d'un lien hypertexte*/
+    color: #fbeccd;
+    background-color: #625650;
+
+}
+
+a:active { /*s'applique au clic d'un lien hypertexte*/
+    color: #fbeccd;
+}
+
+a:focus { /*s'applique à la sélection d'un lien quand on clique sur tab pour naviguer entre tous les liens*/
+    outline-color: #542c19;
+}
+
+/*Boutons vers les projets*********************/
+
+.bouton{
+    background-color: beige; /*arrière-plan du texte beige*/
+    border:2px solid beige; /*bordure 2 pixels ligne continue même couleur que mon background pour que ça fasse comme un bouton*/
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px ; /*arrondi des angles personnalisé pour forme de bouton originale */
+    box-shadow: 2px 2px 10px rgb(29, 49, 63); /*ombre de l'encadré : décalage à droite, décalage en bas, largeur générale de l'ombre*/
+    padding: 10px 20px; /*hauteur de rectangle en em = nombre de fois taille du texte. possible aussi en pixels*/
+    display: inline-block;
+}
+
+.bouton a{ /* "a" pour modifier directement les propriétés du lien hypertexte*/
+    color: black; /*noir au lieu de bleu*/
+    text-decoration: none; /*enlever soulignement*/
+}
+
+.bouton:hover a{ /*au survol texte en bleu*/
+    color: #fbeccd;
+    background-color: #11294d;
+}
+
+
+/*Autres span à la mise en page spécifiques*********************/
+
+.liste_langages_prog{
+    color: #625650;  /*colorer spécifiquement ma liste de langages de prog*/
+}
+
+.data_analyse{
+    color: #625650 ; /*colorer ce mot spécifique*/
+}
+
+.python{
+    color: #625650 ;
+}
+
+/*e-mail****************************/
+
+.e_mail a { /*on met "a" pour cibler directement le lien, pcq sinon le fait que ça soit un lien (bleu et souligné) écrase les autres propriétés de mise en forme*/
+    text-decoration: underline; /*j'ai souligné l'e-mail mais c'est déjà souligné avec le lien hypertexte*/
+    color: black;
+}
+
+.e_mail:hover a { /*au survol du lien e-mail il devient bleu*/
+    color: #542c19;
+}
+
+.contact{
+    display: block; /*parce qu'on a sélectionné avec span, mais normalement on peut pas sélectionner toute une ligne comme ça alors il faut transformer la sélection en bloc pour pouvoir le mettre à droite*/
+    text-align: right; /*mettre le texte à droite*/
+}
+
