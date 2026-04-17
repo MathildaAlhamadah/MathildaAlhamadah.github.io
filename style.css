@@ -4,37 +4,36 @@
       box-sizing: border-box;
     }
 
-    nav{
-      text-decoration: none;
-    }
-
     body {
       font-family: 'Inter', sans-serif; /*police*/
       background: linear-gradient(20deg, #081a3b, #1f417d, #081a3b); /*fond en dégradé diagonal (135 degrés inclinaison*/
       color: #ffffff; /*couleur texte*/
-      display: flex; /*afficher les uns sous les autres je crois*/
-      min-height: 100vh;
+      display: flex; 
+      flex-direction: column; /*afficher les uns sous les autres je crois*/
+      min-height: 100vh; /*prend toute la page*/
     }
  
-    /*Pour page d'accueil : tout sauf les onglets*/
-    .partie_centree{
+    /*Pour page d'accueil : tout sauf le footer*/
+    .main{
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      flex: 1; /*pour que le conteneur prenne tout l'espace vertical disponible. Attention : peut créer des espaces résiduels !*/
     }
 
     .container {
       max-width: 1000px; /*largeur de la textbox pour le texte du centre*/
-      padding: 40px; /*décalage de la textbox à droite je crois*/
+      margin: 0 auto; /*pour centrer*/
+      padding: 10 px 40px; /*décalage de la textbox par rapport au reste en haut et en bas */
       text-align: center; /*centrer*/
-      flex: 1; /*Pour que le conteneur prenne tout l'espace du body, sinon y'a le bandeau bizarre en bas*/
+      display: flex;
+      flex-direction: column;
     }
 
     h1 {
       font-size: 3rem; /*taille titre*/
       margin-top: 50px;
-      margin-bottom: 25px; /*espace entre titre et mon nom*/
+      margin-bottom: 35px; /*espace entre titre et mon nom*/
       font-weight: 500;/*type de gras du texte*/
     }
 
@@ -48,7 +47,7 @@
       font-family: 'Orbitron', sans-serif;
       font-size: 1.8rem; /*taille*/
       color: #ff8c42; /*couleur*/
-      margin-bottom: 30px; /*espacement sous le texte*/
+      margin-bottom: 50px; /*espacement sous le texte*/
       letter-spacing: 2px; /*espacement entre les lettres*/
     }
 
@@ -61,7 +60,7 @@
       margin: 0 auto 40px; /*espace à laisser sous le texte*/
     }
 
-    /*bouton projets*/
+    /*boutons*/
     .cta {
       display: inline-block;
       padding: 12px 28px; /*hauteur et largeur du bouton*/
@@ -78,14 +77,23 @@
       box-shadow: 0 8px 20px rgba(255, 140, 66, 0.3); /*ombre*/
     }
 
+    .boutons {
+      width: 100%; /*répartis sur toute la page*/
+      max-width: 1100px; /*mais quand même pas au-delà de 1200 px*/
+      padding: 40px; /*décalage des boutons par rapport au bas*/
+      margin: 0 auto; /*centrer (pas utile ici pcq redites dans le code je crois)*/
+      display: flex;
+      justify-content: space-around; /*espacer régulièrement les boutons*/
+    }
+
     /*Pied de page*/
     .footer {
-      position: relative;
-      width: 100%; /*largeur de la textbox, ici toute la page*/
-      text-align: center;
       font-size: 0.9rem; /*taille de la police*/
+      text-align: center; /*centrer le texte*/
       color: #8893a8;
       align-items: center;
       justify-content: center;
       background-color: #081a3b;
+      padding: 15px 0; /*largeur bandeau du bas*/
+
     }
